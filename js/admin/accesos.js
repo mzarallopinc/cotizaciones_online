@@ -54,3 +54,36 @@ function tmp_path(obj) {
     var html = '<li id=""><a href="javascript:;" data-id="' + obj.id + '" onclick="ver_path(event)">' + obj.nombre + '</a></li>'
     return html
 }
+
+function tmp_carro(obj) {
+    var html = '<tr id="producto_' + obj.id_producto + '">'
+    html += '<td>' + obj.id_producto + '<input type="hidden" class="productos" value="' + obj.id_producto + '" /></td>'
+    html += '<td>' + obj.nombre + '<br><b>' + obj.marca + '</b></td>'
+    html += '<td>'
+    html += '<div class="row">'
+    html += '<div class="large-4">'
+    html += '<input type="text" class="unidades" id="unidades_' + obj.id_producto + '" value="1" onblur="calcular_carro()" >'
+    html += '</div>'
+    html += '</div>'
+    html += '</td>'
+    html += '<td>'
+    html += '<div class="row">'
+    html += '<div class="large-8">'
+    html += '<input type="text" class="precio_unidad" id="pu_' + obj.id_producto + '" value="' + obj.precio + '" onblur="calcular_carro()" >'
+    html += '</div>'
+    html += '</div>'
+    html += '</td>'
+    html += '<td>'
+    html += '<div class="row">'
+    html += '<div class="large-8">'
+    html += '<input type="text" class="precio_total " id="pt_' + obj.id_producto + '" value="' + obj.precio + '" onblur="calcular_carro()" >'
+    html += '</div>'
+    html += '</div>'
+    html += '</td>'
+    html += '<td>'
+    html += '<button class="btn-eliminar" title="Eliminar este producto" onclik="eliminar_producto_carro(' + obj.id_producto + ')"><i class="fa fa-trash-o fa-2x"></i></button>'
+    html += '</td>'
+    html += '</tr>'
+
+    return html
+}

@@ -124,6 +124,10 @@ class admin extends CI_Controller {
 				$r = $this->modproductos->productos($_POST);
 				echo json_encode($r);
 			break;
+			case 5://traer_producto
+				$r = $this->modproductos->producto($_POST);
+				echo json_encode($r);
+			break;
 		}
 	}
 }

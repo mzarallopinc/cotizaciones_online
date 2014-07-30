@@ -66,5 +66,15 @@ class modproductos extends CI_Model{
 		$query = $this->db->get('catalogo');
 		return $query->result_array();
 	}
+	function producto($param){
+		$this->db->where('id_producto', $param['id']);
+		$query = $this->db->get('catalogo');
+		$row = $query->result_array();
+		if($query->num_rows()>0){
+			return $row[0];
+		}else{
+			return array();
+		}
+	}
 
 } ?>

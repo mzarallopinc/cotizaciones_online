@@ -52,51 +52,26 @@
 					<td colspan="4" align="right" width="80%">Subtotal (Neto)</td>
 					<td width="20%" colspan="2">
 						<i class="fa fa-dollar fa-1x"></i>
+						<span id="total_neto">0</span>
 					</td>
 					</tr>
 					<tr>
 					<td colspan="4" align="right" width="80%">Impuesto (IVA)</td>
 					<td width="20%" colspan="2">
 						<i class="fa fa-dollar fa-1x"></i>
+						<span id="total_iva">0</span>
 					</td>
 					</tr>
 					<tr>
 					<td colspan="4" width="80%">Total</td>
 					<td width="20%" colspan="2">
 						<i class="fa fa-dollar fa-1x"></i>
+						<span id="total_final">0</span>
 					</td>
 					</tr>
 				</tfoot>
-				<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-					<td>
-						<div class="row">
-							<div class="large-8">
-								<input type="text" class="unidades" value="0" >
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="row">
-							<div class="large-8">
-								<input type="text" class="precio_unidad " value="0" >
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="row">
-							<div class="large-8">
-								<input type="text" class="precio_total " value="0" >
-							</div>
-						</div>
-					</td>
-					<td>
-						<button class="btn-eliminar" title="Eliminar este producto"><i class="fa fa-trash-o fa-2x"></i></button>
-
-					</td>
-				</tr>
+				<tbody id="contenido_carro">
+				
 				</tbody>
 			</table>
 			<button title="Generar cotización"><i class="fa fa-check-square fa-2x"></i></button>
